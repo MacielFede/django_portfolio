@@ -1,4 +1,5 @@
 # 📂 Project Structure
+```markdown
 your-project/
 │
 ├── venv/                   # Virtual environment
@@ -7,7 +8,7 @@ your-project/
 │   └── ...
 ├── requirements.txt        # Python dependencies
 └── README.md               # Project instructions (this file)
-
+```
 # ✅ Requirements
 * Python 3.8+
 
