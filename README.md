@@ -16,13 +16,7 @@
 
 Follow the steps below to set up and run the project locally.
 
-### 1. Move into the main Django project directory:
-
-```bash
-cd backend
-```
-
-### 2. Create a Virtual Environment
+### 1. Create a Virtual Environment
 
 From the root of the django directory (backend), run the following command to create a virtual environment:
 
@@ -30,16 +24,16 @@ From the root of the django directory (backend), run the following command to cr
 python3 -m venv venv
 ```
 
-### 3. Activate the Virtual Environment
+### 2. Activate the Virtual Environment
 
-\*\* This step should be done everytime we want to do something with python
+\*\* This step should be done to enter the venv cmd
 Activate the virtual environment with the following command:
 
 ```bash
 source venv/bin/activate
 ```
 
-### 4. Install Dependencies
+### 3. Install Dependencies
 
 Upgrade pip (recommended):
 
@@ -53,10 +47,24 @@ Install the required packages from the requirements.txt file:
 pip install -r requirements.txt
 ```
 
-### 6. Run the Development Server
+### 4. Run the Development Server
 
 Start the Django development server:
 
 ```bash
 python3 manage.py runserver
+```
+
+# Configurations
+
+### Run migrations
+
+```bash
+python3 manage.py migrate
+```
+
+### Create a superuser
+
+```bash
+python3 manage.py createsuperuser
 ```
