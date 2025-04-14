@@ -1,6 +1,6 @@
 # 📂 Project Structure
 ```markdown
-your-project/
+/
 │
 ├── venv/                   # Virtual environment
 ├── webpersonal/            # Main Django project directory
