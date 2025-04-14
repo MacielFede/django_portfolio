@@ -12,37 +12,40 @@
 
 - Python 3.8+
 
-- Django
-
-- Pillow
-
 # Setup Instructions
 
 Follow the steps below to set up and run the project locally.
 
-### 1. Create a Virtual Environment
-
-From the root directory of the project, run the following command to create a virtual environment:
+### 1. Move into the main Django project directory:
 
 ```bash
-py -m venv venv
+cd backend
 ```
 
-### 2. Activate the Virtual Environment
+### 2. Create a Virtual Environment
 
+From the root of the django directory (backend), run the following command to create a virtual environment:
+
+```bash
+python3 -m venv venv
+```
+
+### 3. Activate the Virtual Environment
+
+\*\* This step should be done everytime we want to do something with python
 Activate the virtual environment with the following command:
 
 ```bash
-venv\Scripts\activate
+source venv/bin/activate
 ```
 
-> **Note for macOS/Linux users**: Use the following command instead:
->
-> ```bash
-> source venv/bin/activate
-> ```
+### 4. Install Dependencies
 
-### 3. Install Dependencies
+Upgrade pip (recommended):
+
+```bash
+pip install --upgrade pip
+```
 
 Install the required packages from the requirements.txt file:
 
@@ -50,28 +53,10 @@ Install the required packages from the requirements.txt file:
 pip install -r requirements.txt
 ```
 
-Upgrade pip (recommended):
-
-```bash
-python -m pip install --upgrade pip
-```
-
-Install Pillow (if not already included in requirements.txt):
-
-```bash
-python -m pip install Pillow
-```
-
-### 5. Run the Development Server
-
-Move into the main Django project directory:
-
-```bash
-cd webpersonal
-```
+### 6. Run the Development Server
 
 Start the Django development server:
 
 ```bash
-python manage.py runserver
+python3 manage.py runserver
 ```

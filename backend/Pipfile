@@ -17,4 +17,4 @@ pillow = "*"
 python_version = "3.13"
 
 [scripts]
-webpersonal = "python webpersonal/manage.py runserver"
+backend = "python backend/manage.py runserver"
