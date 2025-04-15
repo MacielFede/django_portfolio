@@ -2,24 +2,26 @@ from django.db import models
 
 # Create your models here.
 
+
 class Project(models.Model):
     title = models.CharField(max_length=200)
     description = models.TextField()
-    image = models.ImageField(upload_to='projects/')
+    image = models.ImageField(upload_to="projects/")
+    github_link = models.CharField(max_length=200, blank=True)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
 
+
 class PortfolioInfo(models.Model):
-    name = models.CharField(max_length=100)
-    job_position = models.CharField(max_length=100)
-    degree_name = models.CharField(max_length=100)
-    avatar = models.ImageField(upload_to='avatars/')
-    about_me = models.TextField()
-    phone_number = models.CharField(max_length=15)
-    email = models.EmailField()
-    github = models.URLField()
-    linkedin = models.URLField()
-    projects = models.ManyToManyField(Project)
+    name = models.CharField(max_length=250, default="Federico Maciel")
+    job_position = models.CharField(max_length=100, blank=True)
+    degree_name = models.CharField(max_length=100, blank=True)
+    avatar = models.ImageField(upload_to="avatars/", blank=True)
+    about_me = models.TextField(blank=True)
+    phone_number = models.CharField(max_length=15, blank=True)
+    email = models.EmailField(blank=True)
+    github = models.URLField(blank=True)
+    linkedin = models.URLField(blank=True)
 
     def __str__(self):
         return self.name

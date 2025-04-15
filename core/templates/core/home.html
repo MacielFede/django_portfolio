@@ -5,6 +5,6 @@
 {% block background%}{%load static%}{% static 'core/img/home-bg.jpg' %}{%endblock%}
 
 {% block headers %}
-    <h1>Tomás Rodríguez</h1>
-    <span class="subheading">Programador</span>
+    <h1>{{portfolio_info.name}}</h1>
+    <span class="subheading">{{portfolio_info.job_position}}</span>
 {% endblock %}
