@@ -24,3 +24,7 @@ class PortfolioInfo(models.Model):
 
     def __str__(self):
         return self.name
+
+    class Meta:
+        verbose_name = "Portoflio Info"
+        verbose_name_plural = "Portoflio Info"
