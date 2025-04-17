@@ -1,7 +1,5 @@
 from django.db import models
 
-# Create your models here.
-
 
 class Project(models.Model):
     title = models.CharField(max_length=200)
@@ -22,6 +20,7 @@ class PortfolioInfo(models.Model):
     email = models.EmailField(blank=True)
     github = models.URLField(blank=True)
     linkedin = models.URLField(blank=True)
+    price = models.PositiveIntegerField(blank=False, default=100)
 
     def __str__(self):
         return self.name

@@ -1,38 +1,23 @@
-{%extends 'core/base.html'%} {% block title %}Acerca de{% endblock %} {% block
-background%}{%load static%}{% static 'core/img/about-bg.jpg' %} {% block headers
-%}
+{%extends 'core/base.html'%} 
+{% block title %}Acerca de{% endblock %}
+{% block background%}{%load static%}{% static 'core/img/about-bg.jpg' %} {% endblock %} 
 <h1>Acerca de mi</h1>
 <span class="subheading">Biografía</span>
 {% block content %}
 <div class="row">
+  {%if portfolio_info.avatar%}
   <div class="col-lg-3 col-md-4 offset-lg-1">
     <img
       class="img-fluid avatar"
-      src="{% static 'core/img/tomas.jpg' %}"
-      alt=""
+      src="{{portfolio_info.avatar.url}}"
+      alt="avatar"
     />
   </div>
+  {%endif%}
   <div class="col-lg-7 col-md-8">
     <h2 class="section-heading">{{ portfolio_info.name }}</h2>
-    <p>{{ portfolio_info.about_me }}</p>
-    {%extends 'core/base.html'%} {% block title %}Acerca de{% endblock %} {%
-    block background%}{%load static%}{% static 'core/img/about-bg.jpg' %} {%
-    block headers %}
-    <h1>Acerca de mi</h1>
-    <span class="subheading">Biografía</span>
-    {% block content %}
-    <div class="row">
-      <div class="col-lg-3 col-md-4 offset-lg-1">
-        <img
-          class="img-fluid avatar"
-          src="{% static 'core/img/tomas.jpg' %}"
-          alt=""
-        />
-      </div>
-      <div class="col-lg-7 col-md-8">
-        <p>{{ portfolio_info.about_me }}</p>
-      </div>
-    </div>
-    {% endblock %}
+    <p>{{portfolio_info.about_me}}
+    </p>
   </div>
 </div>
+{% endblock %}

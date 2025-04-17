@@ -13,6 +13,7 @@ class PortfolioInfoAdmin(admin.ModelAdmin):
         "email",
         "github",
         "linkedin",
+        "price",
     ]
 
     def has_add_permission(self, request):
