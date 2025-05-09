@@ -2,8 +2,8 @@
 
 ```markdown
 ├── venv/ # Virtual environment
-├── backend/ # Main Django project directory
-├── frontend/ # Generated Frontend project directory
+├── portfolio/ # Main Django project directory
+├── manage.py # Application entry point
 ├── requirements.txt # Python dependencies
 └── README.md # Project instructions (this file)
 ```
@@ -47,24 +47,22 @@ Install the required packages from the requirements.txt file:
 pip install -r requirements.txt
 ```
 
-### 4. Run the Development Server
-
-Start the Django development server:
-
-```bash
-python3 manage.py runserver
-```
-
-# Configurations
-
-### Run migrations
+### 4. Run migrations
 
 ```bash
 python3 manage.py migrate
 ```
 
-### Create a superuser
+### 5. Create a superuser
 
 ```bash
 python3 manage.py createsuperuser
+```
+
+### 6. Run the Development Server
+
+Start the Django development server:
+
+```bash
+python3 manage.py runserver
 ```

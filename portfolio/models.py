@@ -11,7 +11,7 @@ class Project(models.Model):
 
 
 class PortfolioInfo(models.Model):
-    name = models.CharField(max_length=250, default="Federico Maciel")
+    name = models.CharField(max_length=250, default="Nombre completo")
     job_position = models.CharField(max_length=100, blank=True)
     degree_name = models.CharField(max_length=100, blank=True)
     avatar = models.ImageField(upload_to="avatars/", blank=True)
